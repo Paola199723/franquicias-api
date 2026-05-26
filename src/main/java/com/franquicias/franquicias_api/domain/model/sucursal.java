@@ -11,9 +11,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+
 @Entity
 @Data
-public class sucursal {
+public class Sucursal {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +26,28 @@ public class sucursal {
     @JoinColumn(name = "franquicia_id")
     private Franquicia franquicia;
 
-    @OneToMany(mappedBy = "sucursal", cascade = CascadeType.ALL)   
-    private List<Producto> lista_productos;
+    @OneToMany(mappedBy = "sucursal", cascade = CascadeType.ALL)
+    private List<Producto> productos;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Franquicia getFranquicia() {
+        return franquicia;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFranquicia(Franquicia franquicia) {
+        this.franquicia = franquicia;
+    }
+
 
 }

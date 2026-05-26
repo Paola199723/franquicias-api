@@ -6,27 +6,43 @@ import org.springframework.stereotype.Service;
 import com.franquicias.franquicias_api.application.dto.SucursalDTO;
 import com.franquicias.franquicias_api.application.mapper.SucursalMapper;
 import com.franquicias.franquicias_api.domain.model.Franquicia;
-import com.franquicias.franquicias_api.domain.model.sucursal;
+import com.franquicias.franquicias_api.domain.model.Sucursal;
 import com.franquicias.franquicias_api.domain.repository.FranquiciaRepository;
 import com.franquicias.franquicias_api.domain.repository.SucursalRepository;
 
 @Service
 public class SucursalService {
-    @Autowired
-    private SucursalRepository repo;
 
     @Autowired
-    private FranquiciaRepository franquiciaRepo;
+    private SucursalRepository sucursalRepository;
+
+    @Autowired
+    private FranquiciaRepository franquiciaRepository;
 
     public SucursalDTO crear(SucursalDTO dto) {
 
-        Franquicia f = franquiciaRepo.findById(dto.getFranquiciaId())
-                .orElseThrow();
+        Franquicia franquicia = franquiciaRepository.findById(dto.getFranquiciaId())
+                .orElseThrow(() -> new RuntimeException("Franquicia no encontrada"));
 
-        sucursal s = new sucursal();
-        s.setNombre(dto.getNombre());
-        s.setFranquicia(f);
+        Sucursal sucursal = new Sucursal();
 
-        return SucursalMapper.toDTO(repo.save(s));
+        sucursal.setNombre(dto.getNombre());
+        sucursal.setFranquicia(franquicia);
+
+        Sucursal sucursalGuardada = sucursalRepository.save(sucursal);
+
+        return SucursalMapper.toDTO(sucursalGuardada);
+    }
+
+    public SucursalDTO actualizarNombre(Long id, SucursalDTO dto) {
+
+        Sucursal sucursal = sucursalRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Sucursal no encontrada"));
+
+        sucursal.setNombre(dto.getNombre());
+
+        Sucursal sucursalActualizada = sucursalRepository.save(sucursal);
+
+        return SucursalMapper.toDTO(sucursalActualizada);
     }
 }

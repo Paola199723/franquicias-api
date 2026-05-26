@@ -3,8 +3,7 @@ package com.franquicias.franquicias_api.application.mapper;
 import com.franquicias.franquicias_api.application.dto.FranquiciaDTO;
 import com.franquicias.franquicias_api.domain.model.Franquicia;
 
-import lombok.Data;
-@Data
+
 public class FranquiciaMapper {
 
     public static FranquiciaDTO toDTO(Franquicia franquicia) {
