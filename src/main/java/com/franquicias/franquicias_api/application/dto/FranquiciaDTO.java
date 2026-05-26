@@ -1,4 +1,4 @@
-package com.franquicias.franquicias_api.dto;
+package com.franquicias.franquicias_api.application.dto;
 
 import lombok.Data;
 
@@ -6,6 +6,8 @@ import lombok.Data;
 public class FranquiciaDTO {
     private Long id;
     private String nombre;
+
+
 
 
 }

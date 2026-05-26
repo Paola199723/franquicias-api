@@ -1,14 +1,15 @@
-package com.franquicias.franquicias_api.service;
+package com.franquicias.franquicias_api.application.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.franquicias.franquicias_api.dto.SucursalDTO;
-import com.franquicias.franquicias_api.mapper.SucursalMapper;
-import com.franquicias.franquicias_api.model.Franquicia;
-import com.franquicias.franquicias_api.model.sucursal;
-import com.franquicias.franquicias_api.repository.FranquiciaRepository;
-import com.franquicias.franquicias_api.repository.SucursalRepository;
+import com.franquicias.franquicias_api.application.dto.SucursalDTO;
+import com.franquicias.franquicias_api.application.mapper.SucursalMapper;
+import com.franquicias.franquicias_api.domain.model.Franquicia;
+import com.franquicias.franquicias_api.domain.model.sucursal;
+import com.franquicias.franquicias_api.domain.repository.FranquiciaRepository;
+import com.franquicias.franquicias_api.domain.repository.SucursalRepository;
+
 @Service
 public class SucursalService {
     @Autowired

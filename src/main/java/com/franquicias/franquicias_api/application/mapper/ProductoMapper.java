@@ -1,8 +1,10 @@
-package com.franquicias.franquicias_api.mapper;
+package com.franquicias.franquicias_api.application.mapper;
 
-import com.franquicias.franquicias_api.dto.ProductoDTO;
-import com.franquicias.franquicias_api.model.Producto;
+import com.franquicias.franquicias_api.application.dto.ProductoDTO;
+import com.franquicias.franquicias_api.domain.model.Producto;
 
+import lombok.Data;
+@Data
 public class ProductoMapper {
  public static ProductoDTO toDTO(Producto p) {
         ProductoDTO dto = new ProductoDTO();

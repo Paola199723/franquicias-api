@@ -1,14 +1,14 @@
-package com.franquicias.franquicias_api.service;
+package com.franquicias.franquicias_api.application.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.franquicias.franquicias_api.dto.FranquiciaDTO;
-import com.franquicias.franquicias_api.mapper.FranquiciaMapper;
-import com.franquicias.franquicias_api.model.Franquicia;
-import com.franquicias.franquicias_api.repository.FranquiciaRepository;
+import com.franquicias.franquicias_api.application.dto.FranquiciaDTO;
+import com.franquicias.franquicias_api.application.mapper.FranquiciaMapper;
+import com.franquicias.franquicias_api.domain.model.Franquicia;
+import com.franquicias.franquicias_api.domain.repository.FranquiciaRepository;
 
 @Service
 public class FranquiciaService {

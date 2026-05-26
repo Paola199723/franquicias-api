@@ -1,13 +1,13 @@
-package com.franquicias.franquicias_api.service;
+package com.franquicias.franquicias_api.application.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.franquicias.franquicias_api.dto.ProductoDTO;
-import com.franquicias.franquicias_api.mapper.ProductoMapper;
-import com.franquicias.franquicias_api.model.Producto;
-import com.franquicias.franquicias_api.model.sucursal;
-import com.franquicias.franquicias_api.repository.ProductoRepository;
-import com.franquicias.franquicias_api.repository.SucursalRepository;
+import com.franquicias.franquicias_api.application.dto.ProductoDTO;
+import com.franquicias.franquicias_api.application.mapper.ProductoMapper;
+import com.franquicias.franquicias_api.domain.model.Producto;
+import com.franquicias.franquicias_api.domain.model.sucursal;
+import com.franquicias.franquicias_api.domain.repository.ProductoRepository;
+import com.franquicias.franquicias_api.domain.repository.SucursalRepository;
 
 public class ProductoService {
   @Autowired

@@ -1,4 +1,4 @@
-package com.franquicias.franquicias_api.dto;
+package com.franquicias.franquicias_api.application.dto;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.franquicias.franquicias_api.controller;
+package com.franquicias.franquicias_api.presentation.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.franquicias.franquicias_api.dto.FranquiciaDTO;
-import com.franquicias.franquicias_api.service.FranquiciaService;
+import com.franquicias.franquicias_api.application.dto.FranquiciaDTO;
+import com.franquicias.franquicias_api.application.service.FranquiciaService;
 
 @RestController
 @RequestMapping("/api/franquicias")

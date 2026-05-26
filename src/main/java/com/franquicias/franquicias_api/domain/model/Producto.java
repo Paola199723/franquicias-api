@@ -1,4 +1,4 @@
-package com.franquicias.franquicias_api.model;
+package com.franquicias.franquicias_api.domain.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
