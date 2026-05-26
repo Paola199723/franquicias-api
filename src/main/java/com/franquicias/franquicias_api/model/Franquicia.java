@@ -18,4 +18,16 @@ private String nombre;
 
 @OneToMany(mappedBy = "franquicia", cascade = CascadeType.ALL)
 private List<sucursal> Sucursallista;
+
+public void setNombre(String nombre) {
+    this.nombre = nombre;
+}
+
+public Long getId() {
+    return id;
+}
+
+public String getNombre() {
+    return nombre;
+}
 }

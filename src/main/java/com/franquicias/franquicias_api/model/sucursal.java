@@ -24,4 +24,24 @@ public class sucursal {
 
     @OneToMany(mappedBy = "sucursal", cascade = CascadeType.ALL)   
     private List<Producto> lista_productos;
+
+    public void setNombre(Object nombre2) {
+        nombre = (String) nombre2;
+    }
+
+    public void setFranquicia(Franquicia f) {
+        franquicia = f;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Franquicia getFranquicia() {
+        return franquicia;
+    }
 }

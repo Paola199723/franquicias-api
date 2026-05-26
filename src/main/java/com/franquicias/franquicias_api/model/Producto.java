@@ -19,4 +19,38 @@ private Integer stock;
 @ManyToOne
 @JoinColumn(name = "sucursal_id")
 private sucursal sucursal;
+
+public void setNombre(Object nombre2) {
+    nombre = (String) nombre2;
 }
+
+public void setStock(Object stock2) {
+    stock = (Integer) stock2;
+}
+
+public void setSucursal(sucursal s) {
+    sucursal = s;
+
+}
+
+public void setStock(Integer stock) {
+        this.stock = stock;
+}
+
+public Long getId() {
+        return id;
+}
+
+public String getNombre() {
+        return nombre;
+}
+
+public Integer getStock() {
+        return stock;
+}
+
+public sucursal getSucursal() {
+        return sucursal;
+}
+}
+
